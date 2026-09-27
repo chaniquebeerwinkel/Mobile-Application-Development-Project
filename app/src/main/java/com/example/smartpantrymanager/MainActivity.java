@@ -24,7 +24,19 @@ public class MainActivity extends AppCompatActivity {
 
         // This opens the Pantry screen
         btnPantry.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, PantryActivity.class);
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    PantryActivity.class
+            );
+            startActivity(intent);
+        });
+
+        btnRecipes.setOnClickListener(view -> {
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    RecipeActivity.class
+            );
+
             startActivity(intent);
         });
     }
