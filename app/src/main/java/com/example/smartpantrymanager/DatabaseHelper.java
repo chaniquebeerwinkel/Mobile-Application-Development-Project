@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "SmartPantry.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
 
     // Pantry table
@@ -115,7 +115,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // On upgrade
-
     @Override
     public void onUpgrade(
             SQLiteDatabase db,
@@ -127,6 +126,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.execSQL(CREATE_RECIPE_TABLE);
 
             db.execSQL(CREATE_RECIPE_INGREDIENT_TABLE);
+        }
+
+        if (oldVersion < 3) {
 
             insertDefaultRecipes(db);
         }
@@ -224,7 +226,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public int deletePantryItem(int id) {
+    public void deletePantryItem(int id) {
 
         SQLiteDatabase db =
                 this.getWritableDatabase();
@@ -238,7 +240,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.close();
 
-        return result;
     }
 
 
@@ -290,7 +291,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    private long addRecipeIngredient(
+    private void addRecipeIngredient(
             SQLiteDatabase db,
             long recipeId,
             String ingredientName,
@@ -320,7 +321,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 unit
         );
 
-        return db.insert(
+        db.insert(
                 TABLE_RECIPE_INGREDIENTS,
                 null,
                 values
