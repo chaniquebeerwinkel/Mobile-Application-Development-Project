@@ -8,19 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnPantry;
-    private Button btnRecipes;
-    private Button btnSettings;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // Find the buttons from activity_main.xml
-        btnPantry = findViewById(R.id.btnPantry);
-        btnRecipes = findViewById(R.id.btnRecipes);
-        btnSettings = findViewById(R.id.btnSettings);
+        Button btnPantry = findViewById(R.id.btnPantry);
+        Button btnRecipes = findViewById(R.id.btnRecipes);
+        Button btnSettings = findViewById(R.id.btnSettings);
 
         // This opens the Pantry screen
         btnPantry.setOnClickListener(view -> {

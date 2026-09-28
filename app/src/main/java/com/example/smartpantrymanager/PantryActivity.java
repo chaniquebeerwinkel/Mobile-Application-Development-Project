@@ -14,18 +14,12 @@ import java.util.ArrayList;
 
 public class PantryActivity extends AppCompatActivity {
 
-    private Button btnAddIngredient;
-
     private TextView txtEmptyPantry;
     private TextView txtItemCount;
 
     private RecyclerView recyclerPantry;
 
     private DatabaseHelper databaseHelper;
-
-    private ArrayList<PantryItem> pantryItems;
-
-    private PantryAdapter pantryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +29,7 @@ public class PantryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pantry);
 
         // Connect XML controls
-        btnAddIngredient =
-                findViewById(R.id.btnAddIngredient);
+        Button btnAddIngredient = findViewById(R.id.btnAddIngredient);
 
         txtEmptyPantry =
                 findViewById(R.id.txtEmptyPantry);
@@ -80,7 +73,7 @@ public class PantryActivity extends AppCompatActivity {
 
     private void loadPantryItems() {
 
-        pantryItems = new ArrayList<>();
+        ArrayList<PantryItem> pantryItems = new ArrayList<>();
 
         Cursor cursor =
                 databaseHelper.getAllPantryItems();
@@ -157,7 +150,7 @@ public class PantryActivity extends AppCompatActivity {
         }
 
         // Adapter
-        pantryAdapter = new PantryAdapter(
+        PantryAdapter pantryAdapter = new PantryAdapter(
                 this,
                 pantryItems
         );

@@ -20,8 +20,6 @@ public class RecipeActivity extends AppCompatActivity {
 
     private ArrayList<Recipe> recipes;
 
-    private RecipeAdapter recipeAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -393,11 +391,10 @@ public class RecipeActivity extends AppCompatActivity {
             );
         }
 
-        recipeAdapter =
-                new RecipeAdapter(
-                        this,
-                        recipes
-                );
+        RecipeAdapter recipeAdapter = new RecipeAdapter(
+                this,
+                recipes
+        );
 
         recyclerRecipes.setAdapter(
                 recipeAdapter
