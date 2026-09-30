@@ -1,3 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Smart Pantry Manager</string>
+
+    <string name="home_title">🥫 SMART PANTRY MANAGER</string>
+    <string name="home_description">Manage your pantry and discover recipes using the ingredients you already have.</string>
+
+    <string name="pantry_title">My Pantry</string>
+    <string name="recipes_title">Recipes</string>
+    <string name="settings_title">Settings</string>
+
+    <string name="back">← Back</string>
+    <string name="add_ingredient">+ Add Ingredient</string>
+
+    <string name="about_app">About the App</string>
+    <string name="data_storage">Data Storage</string>
+    <string name="application_features">Application Features</string>
+
 </resources>

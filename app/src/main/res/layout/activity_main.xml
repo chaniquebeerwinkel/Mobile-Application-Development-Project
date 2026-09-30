@@ -1,121 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="24dp"
-    android:background="#F8F9FA">
+    android:background="@color/background">
 
-    <!--App title -->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="🥫"
-        android:textSize="50sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="SMART PANTRY"
-        android:textColor="#2E7D32"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MANAGER"
-        android:textColor="#2E7D32"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <!-- Description -->
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Reduce food waste and cook delicious meals using the ingredients you already have."
-        android:textColor="#555555"
-        android:textSize="16sp"
-        android:lineSpacingExtra="4dp"/>
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
+        <TextView
+            android:id="@+id/txtHomeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_title"
+            android:textColor="@color/primary_green_dark"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingTop="40dp"
+            android:paddingBottom="16dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/txtHomeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_description"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:paddingBottom="40dp" />
 
-    <!-- Button -->
+        <Button
+            android:id="@+id/btnPantry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🥫  My Pantry"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            android:backgroundTint="@color/primary_green"
+            android:minHeight="56dp"
+            android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnPantry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="15dp"
-        android:text="MY PANTRY"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🍳  Recipes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            android:backgroundTint="@color/primary_green"
+            android:minHeight="56dp"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Pantry description -->
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙  Settings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            android:backgroundTint="@color/primary_green_dark"
+            android:minHeight="56dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="View and manage your ingredients"
-        android:textColor="#777777"
-        android:textSize="13sp" />
+    </LinearLayout>
 
-    <!-- Recipes button -->
-
-    <Button
-        android:id="@+id/btnRecipes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"
-        android:text="SUGGESTED RECIPES"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <!-- Recipes description -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Discover recipes you can make right now"
-        android:textColor="#777777"
-        android:textSize="13sp" />
-
-    <!-- Settings button -->
-
-    <Button
-        android:id="@+id/btnSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"
-        android:text="SETTINGS"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <!-- Settings description -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Manage your app preferences"
-        android:textColor="#777777"
-        android:textSize="13sp" />
-
-</LinearLayout>
+</ScrollView>

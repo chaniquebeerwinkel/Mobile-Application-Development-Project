@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            android:textColor="#@color/primary_green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp" />
+
+        <!-- Recipe Name -->
+        <TextView
+            android:id="@+id/txtRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe Name"
+            android:textColor="#@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <!-- Recipe Description -->
+        <TextView
+            android:id="@+id/txtRecipeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe description"
+            android:textColor="#@color/text_secondary"
+            android:textSize="16sp"
+            android:paddingBottom="20dp" />
+
+        <!-- Availability Message -->
+        <TextView
+            android:id="@+id/txtAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✓ You have all the required ingredients"
+            android:textColor="#@color/success_green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="#@color/primary_green_light"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Ingredients Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textColor="#212121"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <!-- Ingredients List -->
+        <TextView
+            android:id="@+id/txtIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients will appear here"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            android:lineSpacingExtra="6dp"
+            android:paddingBottom="24dp" />
+
+        <!-- Instructions Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instructions"
+            android:textColor="#212121"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <!-- Instructions -->
+        <TextView
+            android:id="@+id/txtInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instructions will appear here"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            android:lineSpacingExtra="6dp" />
+
+    </LinearLayout>
+
+</ScrollView>
