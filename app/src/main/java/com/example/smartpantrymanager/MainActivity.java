@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnRecipes = findViewById(R.id.btnRecipes);
         Button btnSettings = findViewById(R.id.btnSettings);
 
+
         // This opens the Pantry screen
         btnPantry.setOnClickListener(view -> {
             Intent intent = new Intent(
@@ -31,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(
                     MainActivity.this,
                     RecipeActivity.class
+            );
+
+            startActivity(intent);
+        });
+
+        btnSettings.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    SettingsActivity.class
             );
 
             startActivity(intent);
